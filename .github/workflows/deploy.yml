@@ -3,10 +3,11 @@ name: Deploy Mobirise Site
 on:
   push:
     branches:
-      - main  # Replace 'main' with your branch name if different
+      - main  # Replace with your branch name if different
 
 permissions:
   contents: read
+  pages: write  # This permission is necessary to deploy to GitHub Pages
   id-token: write
 
 jobs:
@@ -14,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout Code
       uses: actions/checkout@v3
 
     - name: Set up Node.js
