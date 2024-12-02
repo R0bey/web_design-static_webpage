@@ -22,9 +22,6 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Install Dependencies
-      run: npm install  # Optional if you have build dependencies, like `npm run build`
-
     - name: Upload Mobirise Files as Artifact
       uses: actions/upload-artifact@v4
       with:
